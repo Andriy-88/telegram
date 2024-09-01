@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mini Shop</h1>
+    </header>
+    <main>
+        <section id="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: $10</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Price: $20</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Telegram WebApp API
+        const tg = window.Telegram.WebApp;
+
+        // Personalizza la barra superiore di Telegram
+        tg.MainButton.text = "Checkout";
+        tg.MainButton.show();
+
+        tg.MainButton.onClick(() => {
+            tg.close(); // Simula l'azione di checkout
+        });
+
+        // Mostra alcune info di debug (opzionale)
+        console.log("WebApp init data:", tg.initDataUnsafe);
+    </script>
+</body>
+</html>
